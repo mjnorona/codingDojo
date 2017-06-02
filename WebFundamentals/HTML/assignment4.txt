@@ -1,0 +1,14 @@
+cd Desktop/
+mkdir test
+cd test
+touch index.html styles.css commands.txt
+cp index.html index2.html
+rm styles.css
+cd ..
+mkdir destination
+cd test
+mv index2.html /Users/mjnorona/Documents/CodingDojo/WebFun/destination
+cd destination/
+cd ..
+cd test
+rm -rf destination

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTTP Request Response</title>
+        <link rel = "stylesheet" type = "text/css" href = "style.css"?>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type = "text/javascript"></script>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+                for (var i = 1; i <=151; i ++ ){
+
+                    $(".pokemonList").append("<img id = '" + i + "' src='http://pokeapi.co/media/img/" +  i + ".png' alt='bulbasaur'>")
+                }
+
+                $(".pokemonList img").click(function(){
+                    var poke = $(this).attr("id");
+                    var image = $(this).attr("src");
+
+                    $.get("http://pokeapi.co/api/v1/pokemon/" + poke + "/", function(res){
+                        var name = res.name;
+                        var types = [];
+                        var height = res.height;
+                        var weight = res.weight;
+
+                        for (var i = 0; i < res.types.length; i++)
+                        {
+                            types.push(res.types[i].name);
+
+                        }
+
+                        $(".pokedex").html("<div><h1>"
+                            + name + "</h1>"
+                            + "<img id = 'pokePic' src ='" + image + "'>" +
+                            "<h4>Types</h4><ul>" +
+                            "</ul>" +
+                            "<h4>Height</h4><p>" + height + "</p>" +
+                            "<h4>Weight</h4><p>" + weight + "</p></div>")
+                        for (var j = 0; j < types.length; j++){
+                            $(".pokedex ul").append("<li>"+types[j]+"</li>")
+                        }
+                        $(".pokedex").css("display", "inline-block");
+
+
+                    }, 'json');
+
+                })
+
+            })
+        </script>
+        <!-- add http:// before the website name -->
+        <div class = "container">
+            <div class = "pokemonList">
+
+            </div>
+            <div class = "pokedex">
+
+            </div>
+        </div>
+
+    </body>
+</html>

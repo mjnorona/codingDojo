@@ -1,0 +1,9 @@
+Make repo
+Log into gitHub
+create repo on github
+go to repo on local
+git init
+touch readme.md
+git status
+git add .
+git commit -m "initial commit"
