@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    width: 2000px;
+}
+img {
+    display: inline-block;
+    max-height: 200px;
+    margin-right: 10px;
+}
+
+.houses {
+    margin: 20px 20px 20px 20px;
+}
+
+h4 {
+    display: inline-block;
+}
+p{
+    display: inline-block;
+}
+
+.sect {
+    margin-top: 20px;
+}
+
+.list {
+    margin-top: 40px;
+}
+.details {
+    border: 5px solid black;
+    width: 500px;
+    margin: 30px 10px 10px 475px;
+    padding: 20px 20px 20px 20px;
+}

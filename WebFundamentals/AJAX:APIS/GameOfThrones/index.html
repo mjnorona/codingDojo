@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTTP Request Response</title>
+        <link rel = "stylesheet" type = "text/css" href = "style.css"?>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type = "text/javascript"></script>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function() {
+                $("img").click(function(){
+                    var url = "https://anapioficeandfire.com/api/houses/" + $(this).attr("id") + "/";
+
+                    $.get(url, function(res){
+                        var name = res.name;
+                        var words = res.words;
+                        var titles = res.titles;
+
+
+                        $(".details").html("<div><h3>House Details</h3><div class = 'sect'><h4>Name:</h4><p>" +
+                            name +"</p></div>" +
+                            "<div class = 'sect'><h4>Words:</h4><p>" + words + "</p></div>" +
+                            "<div class = 'list'><h4>Titles:</h4></div>")
+                        for (var i = 0; i < titles.length; i++){
+                            $(".list").append(titles[i] + ", ")
+                        }
+                    }, "json")
+                })
+
+                for (var j = 0; j < 450; j++){
+                    $.get("https://anapioficeandfire.com/api/houses/" + j + "/", function(res){
+                        console.log(res)
+                    }, "json")
+                }
+
+            });
+
+
+        </script>
+        <div class = "container">
+            <div class = "houses">
+                <img id = "362" src = "./gameofthrones/stark.jpg">
+                <img id = "378" src = "./gameofthrones/targaryen.jpg">
+                <img id = "229" src = "./gameofthrones/lannister.jpg">
+                <img id = "16" src = "./gameofthrones/baratheon.png">
+            </div>
+
+            <div class = "details">
+            </div>
+        </div>
+
+    </body>
+</html>

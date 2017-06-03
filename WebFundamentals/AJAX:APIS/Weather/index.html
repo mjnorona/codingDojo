@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTTP Request Response</title>
+        <link rel = "stylesheet" type = "text/css" href = "style.css"?>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type = "text/javascript"></script>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function() {
+                var key = "fb9e2f474d95e73d1915d5b97fcf1e84";
+                $('form').submit(function() {
+                    var key = "fb9e2f474d95e73d1915d5b97fcf1e84";
+                    // your code here (build up your url)
+                    $.get(, function(res) {
+                        // your code here
+                    }, 'json');
+                    // don't forget to return false so the page doesn't refresh
+                    return false;
+                });
+            });
+        </script>
+        <input id = "city">
+        <button>Search Weather</button>
+        <div class = "content"></div>
+    </body>
+</html>
