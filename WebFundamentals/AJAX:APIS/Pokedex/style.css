@@ -13,7 +13,7 @@
 }
 
 .pokedex {
-    border: 10px solid red;
+    border: 5px solid red;
     width: 300px;
     position: fixed;
     vertical-align: top;

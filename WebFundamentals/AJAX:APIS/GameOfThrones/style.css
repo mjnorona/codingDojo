@@ -10,6 +10,7 @@ img {
     display: inline-block;
     max-height: 200px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .houses {
@@ -35,4 +36,5 @@ p{
     width: 500px;
     margin: 30px 10px 10px 475px;
     padding: 20px 20px 20px 20px;
+    display: none;
 }

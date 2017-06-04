@@ -10,20 +10,34 @@
     <body>
         <script>
             $(document).ready(function() {
+
                 var key = "fb9e2f474d95e73d1915d5b97fcf1e84";
                 $('form').submit(function() {
+                    var place = $("#city").val();
                     var key = "fb9e2f474d95e73d1915d5b97fcf1e84";
-                    // your code here (build up your url)
-                    $.get(, function(res) {
-                        // your code here
+                    var url = "http://api.openweathermap.org/data/2.5/weather?q=" + place + "&&appid=" + key
+
+                    //your code here (build up your url)
+                    $.get(url, function(res) {
+                        var name = res.name;
+
+                        var fahr = (res.main.temp * (9/5)) - 459.67;
+                        fahr = Math.floor(fahr);
+
+
+                        $(".weather").html("<div><h1>" + name + "</h1>" +
+                            "<h4>Temperature: " + fahr + "</h4></div>")
                     }, 'json');
                     // don't forget to return false so the page doesn't refresh
                     return false;
                 });
             });
         </script>
-        <input id = "city">
-        <button>Search Weather</button>
-        <div class = "content"></div>
+        <form class = "content">
+            <input id = "city" type = "text">
+            <input type = "submit" value = "Search Weather">
+            <div class = "content"></div>
+        </form>
+        <div class = "weather"></div>
     </body>
 </html>
