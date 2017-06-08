@@ -24,9 +24,8 @@ class CallCenter(object):
         return self
 
     def remove(self):
-        for i in range(0, len(self.calls)-1):
-            self.calls[i] = self.calls[i+1]
-            self.calls = self.calls[:-1]
+        self.calls = self.calls[1:len(self.calls) - 1]
+        self.queue -= 1
 
         return self
 
@@ -47,4 +46,5 @@ call4 = Call("110294", "Patient", "4958372846", "5:00pm", "Wanted to talk")
 
 calls = [call1, call2, call3, call4]
 center = CallCenter(calls)
+center.remove()
 center.info()
