@@ -1,0 +1,7 @@
+<html>
+    <body>
+        {% if filename %}
+            <img src="{{ url_for('static', filename = 'Ninjas/' + filename + '.jpg')}}">
+        {% endif %}
+    </body>
+</html>

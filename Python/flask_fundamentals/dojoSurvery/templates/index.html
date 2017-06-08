@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href="{{ url_for('static',filename = 'style.css') }}">
+    </head>
+    <body>
+        <form action = "/results" method = "post">
+            <label>Your Name: </label><input type = "text" name = "name"><br>
+            <label>Dojo Location: </label><input type = "text" name = "location"><br>
+            <label>Favorite Language</label><input type = "text" name = "language"><br>
+            <label>Comment (optional):</label>
+            <textarea name = "comment"></textarea>
+            <input type = "submit">
+        </form>
+    </body>
+</html>
