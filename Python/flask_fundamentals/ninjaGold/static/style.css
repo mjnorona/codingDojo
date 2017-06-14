@@ -1,0 +1,16 @@
+.findGold {
+    display: block;
+}
+
+.option {
+    display: inline-block;
+    border: 3px solid black;
+}
+
+#results {
+    border: 3px solid black;
+}
+
+.green {
+    color: green;
+}

@@ -1,0 +1,7 @@
+USE twitter
+
+Then simply write a query on the database since it has been chosen.
+
+SELECT *
+FROM users
+WHERE id = 1;

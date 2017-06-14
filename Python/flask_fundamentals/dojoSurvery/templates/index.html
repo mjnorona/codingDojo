@@ -3,10 +3,29 @@
         <link rel = "stylesheet" type = "text/css" href="{{ url_for('static',filename = 'style.css') }}">
     </head>
     <body>
-        <form action = "/results" method = "post">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form action = "/results" method = "post">
             <label>Your Name: </label><input type = "text" name = "name"><br>
-            <label>Dojo Location: </label><input type = "text" name = "location"><br>
-            <label>Favorite Language</label><input type = "text" name = "language"><br>
+            <label>Dojo Location: </label>
+            <select name = "location">
+                <option value = "San Jose">San Jose</option>
+                <option value = "Vallejo">Vallejo</option>
+                <option value = "San Francisco">San Francisco</option>
+            </select>
+            <br>
+            <label>Favorite Language: </label>
+            <select name = "language">
+                <option value = "Java">Java</option>
+                <option value = "C">C</option>
+                <option value = "Python">Python</option>
+            </select>
+            <br>
             <label>Comment (optional):</label>
             <textarea name = "comment"></textarea>
             <input type = "submit">

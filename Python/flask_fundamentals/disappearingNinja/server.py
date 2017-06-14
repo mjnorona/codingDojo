@@ -12,7 +12,18 @@ def tmnt():
 
 @app.route("/ninja/<filename>")
 def turtle(filename):
+    if  filename == "purple":
+        filename = "donatello"
+    elif filename == "blue":
+        filename = "leonardo"
+    elif filename == "red":
+        filename = "raphael"
+    elif filename == "orange":
+        filename = "michelangelo"
+
     if filename == "donatello" or filename == "leonardo" or filename == "michelangelo" or filename == "raphael":
+
+
         return render_template("certainNinja.html", filename = filename)
     else:
         return render_template("certainNinja.html", filename = "notapril")
