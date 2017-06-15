@@ -1,0 +1,11 @@
+<html>
+    <link rel = "stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <body>
+
+        <h1 class = "green">The email address you entered {{input}} is a valid email address! Thank you!</h1>
+        <h2>Email Addresses Entered: </h2>
+        {% for email in list: %}
+            <p>{{email['email']}} {{email['created_at']}}</p>
+        {% endfor %}
+    </body>
+</html>

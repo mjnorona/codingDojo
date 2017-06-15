@@ -1,0 +1,8 @@
+Changed 'user' to 'cool':
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'cool'@'localhost' (using password: YES)")
+
+Changed 'port' to 5000:
+did not load page
+
+changed 'password' to 'fun':
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
