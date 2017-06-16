@@ -8,57 +8,63 @@
 
     <script type = "text/javascript">
         function SLL(){
-            this.head = null
+            this.head = null;
+
+            this.addFront = function(value)
+            {
+                var newNode = new Node(value);
+                if (list.head){
+                    newNode.next = list.head;
+                    list.head = newNode;
+                }
+                else {
+                    list.head = newNode;
+                }
+            }
+
+            this.addBack = function(value)
+            {
+                var newNode=new Node(value);
+                var current = this.head;
+                if (!this.head){
+                    this.head = newNode
+                }
+                else{
+                    while (current.next){
+                        current = current.next
+                    }
+                    current.next = newNode
+                }
+            }
+
+            this.display = function()
+            {
+                var current = list.head;
+                var display = "";
+                if (list.head) {
+                    while (current.next) {
+                        display += current.value + ", "
+                        current = current.next
+                    }
+                    display += current.value
+                }
+                console.log(display)
+            }
+
         }
+
         function Node(value){
             this.value = value;
             this.next = null;
         }
 
-        function addFront(list, value){
-            var newNode = new Node(value);
-            if (list.head){
-                newNode.next = list.head;
-                list.head = newNode;
-            }
-            else {
-                list.head = newNode;
-            }
-        }
 
-        function addBack(list,value){
-            var newNode=new Node(value);
-            var current = list.head;
-            if (!list.head){
-                list.head = newNode
-            }
-            else{
-                while (current.next != null){
-                    current = current.next
-                }
-                current.next = newNode
-            }
-        }
-
-        function display(list){
-            var current = list.head;
-            var display = "";
-            if (list.head) {
-                while (current.next) {
-                    display += current.value + ", "
-                    current = current.next
-                }
-                display += current.value
-            }
-            console.log(display)
-        }
 
         var list = new SLL();
-        addFront(list, "John");
-        addFront(list, "MJ");
-        addBack(list, "Jacob");
-        addBack(list, "Jingle");
-        display(list);
+        list.addFront("John");
+        list.addBack("MJ");
+        list.addBack("Norona");
+        list.display();
 
 
     </script>

@@ -12,15 +12,23 @@ def init():
 @app.route('/submit', methods = ["POST"])
 def submit():
     if EMAIL_REGEX.match(request.form['email']):
-        query = "INSERT INTO users (email, created_at, updated_at) VALUES (:email, NOW(), NOW())"
-        data = {
-                    'email' : request.form['email']
-                }
-        mysql.query_db(query, data)
+        select = "SELECT email FROM users WHERE users.email = :specific_email"
+        dataCheck = {"specific_email": request.form['email']}
+        check = mysql.query_db(select, dataCheck)
 
-        query2 = "SELECT * FROM users"
-        list = mysql.query_db(query2)
-        return render_template("success.html", list= list, input = request.form['email'])
+        try:
+            if check[0]['email'] == request.form['email']:
+                return render_template("index.html", exists =1)
+        except IndexError:
+            query = "INSERT INTO users (email, created_at, updated_at) VALUES (:email, NOW(), NOW())"
+            data = {
+                'email': request.form['email']
+            }
+            mysql.query_db(query, data)
+
+            query2 = "SELECT * FROM users"
+            list = mysql.query_db(query2)
+            return render_template("success.html", list=list, input=request.form['email'])
     else:
         return render_template("index.html", invalid = 1)
 

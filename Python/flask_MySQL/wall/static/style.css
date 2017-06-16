@@ -1,0 +1,8 @@
+label {
+    display: block;
+}
+
+.error {
+    border: 3px solid black;
+}
+

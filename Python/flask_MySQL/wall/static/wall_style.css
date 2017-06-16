@@ -1,0 +1,75 @@
+.container {
+    width: 810px;
+
+}
+
+.header{
+    background-color: #3C4C5B;
+    color: white;
+}
+
+h1{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    padding: 10px 15px 10px 15px;
+    border-radius: 3px;
+}
+
+.bod{
+    margin-left: 20px;
+}
+textarea{
+    display: block;
+}
+input {
+    display: block;
+}
+
+.message {
+    margin-left: 50px;
+}
+
+.comment {
+    margin-left: 100px;
+}
+
+.comment_content {
+    margin-left: 150px;
+}
+
+.commentBox{
+    margin-left: 100px;
+}
+
+#welcome {
+    display: inline-block;
+    margin-left: 250px;
+    margin-right: 40px;
+}
+
+#buttonMes{
+    text-align: center;
+    margin: 10px 10px 10px 620px;
+
+}
+
+h3{
+    color: #009AC7;
+
+}
+
+h4{
+    color: #3C4C5B;
+}
+
+.buttonCon{
+    margin: 20px 10px 10px 500px;
+}
+

@@ -1,0 +1,44 @@
+<html>
+    <link rel = "stylesheet" type = "text/css" href="{{ url_for('static', filename = 'wall_style.css') }}">
+    <body>
+        <div class = "container">
+            <div class = "header">
+                <h1>Coding Dojo Wall</h1>
+                <h2 id = "welcome">Welcome {{ username }}</h2>
+                <a href = "/">Log Off</a>
+            </div>
+            <div class = "bod">
+                <div>
+                    <h2>Post a message</h2>
+                <form action = "/message" method = "post">
+                    <textarea name = "message" rows = "8" cols = "125"></textarea>
+                    <input type = "hidden" name = "action" value = "post">
+                    <input id = "buttonMes" type = "submit" value = "Post a message">
+                </form>
+                </div>
+                {% for message in messages %}
+                    <h3>{{ message['name'] }}--- {{ message['date'] }}</h3>
+                    <p class = "message">{{ message['content'] }}</p>
+
+                    {%  for comment in comments %}
+                        {% if comment['messages_id'] == message['id']%}
+                            <h4 class = "comment">{{ comment['name'] }}--- {{ comment['date'] }}</h4>
+                            <p class = "comment_content">{{ comment['content'] }}</p>
+                        {% endif %}
+                    {% endfor %}
+
+                    <form action = "/comment" method = "post" class = "commentBox">
+                        <br>
+                        <p>Comment: </p>
+                        <textarea name = "message" rows="5" cols="100"></textarea>
+                        <input type = "hidden" name = "action" value = "{{ message['id']}}">
+                        <input class = "buttonCon" class = "button" type = "submit" value = "Post a message">
+                    </form>
+
+                    <hr>
+                {% endfor %}
+            </div>
+
+        </div>
+    </body>
+</html>

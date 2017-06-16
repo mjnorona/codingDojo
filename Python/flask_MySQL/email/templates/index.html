@@ -4,6 +4,9 @@
         {% if invalid == 1: %}
             <h1 class = "red">Email is not valid!</h1>
         {% endif %}
+        {% if exists == 1: %}
+            <h1 class = "red">Email exists</h1>
+        {% endif %}
         <form action = "/submit" method = "post">
             <label>Email Address: </label><input type = "text" name = "email">
             <input type = "submit">
