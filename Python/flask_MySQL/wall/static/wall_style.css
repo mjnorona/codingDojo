@@ -1,16 +1,27 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
 .container {
     width: 810px;
+    margin: auto;
+    background-color: #F1F4F8 ;
 
 }
 
 .header{
     background-color: #3C4C5B;
     color: white;
+    padding: 10px 5px 10px 5px;
 }
 
 h1{
     display: inline-block;
     margin-left: 20px;
+}
+
+span {
+    color: #009AC0;
 }
 
 a {
@@ -24,6 +35,7 @@ a {
 
 .bod{
     margin-left: 20px;
+    padding-top: 10px;
 }
 textarea{
     display: block;
@@ -50,13 +62,14 @@ input {
 
 #welcome {
     display: inline-block;
-    margin-left: 250px;
+    margin-left: 220px;
     margin-right: 40px;
 }
 
 #buttonMes{
     text-align: center;
     margin: 10px 10px 10px 620px;
+    padding: 100px;
 
 }
 

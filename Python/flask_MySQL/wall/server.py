@@ -43,6 +43,7 @@ def register():
                 query2 = "SELECT id FROM users WHERE email = :newEmail"
                 data2 = { 'newEmail': request.form['email']}
                 userID = mysql.query_db(query2,data2)
+
                 session['id'] = userID[0]['id']
 
                 return redirect("/wall")
@@ -54,18 +55,20 @@ def register():
 @app.route('/login', methods = ['POST'])
 def login():
     if request.form['action'] == 'login':
+        try:
+            query = "SELECT password FROM users WHERE users.email = :specific_email"
+            data = {"specific_email": request.form['email']}
+            password = mysql.query_db(query,data)
+            if md5.new(request.form['password']).hexdigest() == password[0]['password']:
+                query2 = "SELECT id FROM users WHERE email = :newEmail"
+                data2 = {'newEmail': request.form['email']}
+                userID = mysql.query_db(query2, data2)
 
-        query = "SELECT password FROM users WHERE users.email = :specific_email"
-        data = {"specific_email": request.form['email']}
-        password = mysql.query_db(query,data)
-        if md5.new(request.form['password']).hexdigest() == password[0]['password']:
-            query2 = "SELECT id FROM users WHERE email = :newEmail"
-            data2 = {'newEmail': request.form['email']}
-            userID = mysql.query_db(query2, data2)
-            session['id'] = userID[0]['id']
-            return redirect("/wall")
-        else:
-            return render_template("index.html", log = True)
+                session['id'] = userID[0]['id']
+                return redirect("/wall")
+
+        except IndexError:
+            return render_template("index.html", log=True)
 
     else:
         return redirect("/")
@@ -73,18 +76,21 @@ def login():
 @app.route("/wall")
 def wall():
     user = 'SELECT first_name FROM users WHERE users.id = :userid'
-    userData = { 'userid': session['id']}
-    username = mysql.query_db(user, userData)
+    if "id" in session:
+        userData = { 'userid': session['id']}
+        username = mysql.query_db(user, userData)
 
-    join = 'SELECT concat(users.first_name, " ", users.last_name) AS name, messages.content, concat(monthname(messages.created_at)," ", day(messages.created_at), ", ", year(messages.created_at)) as date, messages.id FROM users JOIN messages on users.id = messages.users_id ORDER BY messages.created_at DESC'
-    data = { 'id': session['id']}
-    myData = mysql.query_db(join, data)
+        join = 'SELECT concat(users.first_name, " ", users.last_name) AS name, messages.content, concat(monthname(messages.created_at)," ", day(messages.created_at), ", ", year(messages.created_at)) as date, messages.id FROM users JOIN messages on users.id = messages.users_id ORDER BY messages.created_at DESC'
+        data = { 'id': session['id']}
+        myData = mysql.query_db(join, data)
 
 
-    commentsData = 'SELECT concat(users.first_name, " ", users.last_name) as name, comments.content, concat(monthname(comments.created_at)," ", day(comments.created_at), ", ", year(comments.created_at)) as date, comments.messages_id FROM comments JOIN users ON comments.users_id = users.id'
-    comments = mysql.query_db(commentsData)
-    # return str(comments[0])
-    return render_template("wall.html",messages = myData, comments = comments, username = username[0]['first_name'])
+        commentsData = 'SELECT concat(users.first_name, " ", users.last_name) as name, comments.content, concat(monthname(comments.created_at)," ", day(comments.created_at), ", ", year(comments.created_at)) as date, comments.messages_id FROM comments JOIN users ON comments.users_id = users.id'
+        comments = mysql.query_db(commentsData)
+        # return str(comments[0])
+        return render_template("wall.html",messages = myData, comments = comments, username = username[0]['first_name'])
+    else:
+        return redirect("/")
 
 @app.route("/message", methods = ["POST"])
 def message():
@@ -111,6 +117,11 @@ def comment():
     mysql.query_db(query, data)
 
     return redirect("/wall")
+
+@app.route("/logout")
+def logout():
+    session.pop('id', None)
+    return redirect("/")
 app.run(debug=True)
 
 

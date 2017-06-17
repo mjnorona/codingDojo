@@ -1,39 +1,39 @@
 <html>
     <link rel = "stylesheet" type="text/css" href = "{{url_for('static', filename = 'style.css')}}">
     <body>
-        {%if invalid == True: %}
-            <div class = "error">
-                <p>First Name - must be letters only and at least 2 characters</p>
-                <p>Last Name - must be letters only and at least 2 characters</p>
-                <p>Email - must be valid email and cannot be empty</p>
-                <p>Password - must be at least 8 characters and cannot be empty</p>
-                <p>Password Confirmation - must match password</p>
-            </div>
-            <hr>
-        {% endif %}
-        {%if exists == True: %}
-            <p class = 'error'>User with inputted email already exists</p>
-        {%endif%}
-        {% if log == True: %}
-            <p class = 'error'>Email or Password is incorrect</p>
-        {% endif %}
-        <form action="/register" method = "post">
-            <h2>Register</h2>
-            <label for = "first">First Name:</label><input type = "text" id = "first" name = "first">
-            <label for = "last">Last Name:</label><input type = "text" id = "last" name = "last">
-            <label for = "email">Email:</label><input type = "text" id = "email" name = "email">
-            <label for = "password">Password:</label><input type = "text" id = "password" name = "password">
-            <label for = "confirm">Confirm:</label><input type = "text" id = "confirm" name = "confirm">
-            <input type = "hidden" name = "action" value = "register">
-            <input type = "submit">
-        </form>
-        <hr>
-        <form action="/login" method = "post">
-            <h2>Log In</h2>
-            <label for = "logemail">Email:</label><input type = "text" id = "logemail" name = "email">
-            <label for = "logpassword">Password:</label><input type = "password" id = "logpassword" name = "password">
-            <input type = "hidden" name = "action" value = "login">
-            <input type = "submit">
-        </form>
+        <div class = "container">
+            {%if invalid == True: %}
+                <div class = "error">
+                    <p>First Name - must be letters only and at least 2 characters</p>
+                    <p>Last Name - must be letters only and at least 2 characters</p>
+                    <p>Email - must be valid email and cannot be empty</p>
+                    <p>Password - must be at least 8 characters and cannot be empty</p>
+                    <p>Password Confirmation - must match password</p>
+                </div>
+            {% endif %}
+            {%if exists == True: %}
+                <p class = 'error'>User with inputted email already exists</p>
+            {%endif%}
+            {% if log == True: %}
+                <p class = 'error'>Email or Password is incorrect</p>
+            {% endif %}
+            <form action="/register" method = "post">
+                <h2>Register</h2>
+                <label for = "first">First Name:</label><input type = "text" id = "first" name = "first">
+                <label for = "last">Last Name:</label><input type = "text" id = "last" name = "last">
+                <label for = "email">Email:</label><input type = "text" id = "email" name = "email">
+                <label for = "password">Password:</label><input type = "password" id = "password" name = "password">
+                <label for = "confirm">Confirm:</label><input type = "password" id = "confirm" name = "confirm">
+                <input type = "hidden" name = "action" value = "register">
+                <input type = "submit">
+            </form>
+            <form action="/login" method = "post">
+                <h2>Log In</h2>
+                <label for = "logemail">Email:</label><input type = "text" id = "logemail" name = "email">
+                <label for = "logpassword">Password:</label><input type = "password" id = "logpassword" name = "password">
+                <input type = "hidden" name = "action" value = "login">
+                <input type = "submit">
+            </form>
+        </div>
     </body>
 </html>

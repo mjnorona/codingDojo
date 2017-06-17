@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include  # Notice we added include
-from django.contrib import admin
+
 
 urlpatterns = [
     url(r'^', include('apps.hello.urls'))  # And now we use the include function to pull in our first_app.urls...
