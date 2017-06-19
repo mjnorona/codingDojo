@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Survey Info:</h1>
+    <h2>Name: {{ request.session.name }}</h2>
+    <h2>Dojo Location: {{ request.session.location }}</h2>
+    <h2>Favorite Language {{ request.session.language}}</h2>
+    <h2>Comment: {{ request.session.comment }}</h2>
+    <button><a href = "/">Go Back</a></button>
+</body>
+</html>

@@ -13,7 +13,8 @@
                 <form action = "/message" method = "post">
                     <textarea name = "message" rows = "8" cols = "125"></textarea>
                     <input type = "hidden" name = "action" value = "post">
-                    <input id = "buttonMes" type = "submit" value = "Post a message">
+                    <button id= "buttonMes" type="submit">Post Message</button>
+
                 </form>
                 </div>
                 {% for message in messages %}
@@ -33,7 +34,8 @@
                         <p>Comment: </p>
                         <textarea name = "message" rows="5" cols="100"></textarea>
                         <input type = "hidden" name = "action" value = "{{ message['id']}}">
-                        <input class = "buttonCon" class = "button" type = "submit" value = "Post a message">
+                        <button class = "buttonCon" type="submit">Post Comment</button>
+
                     </form>
 
                     <hr>

@@ -6,11 +6,13 @@
     width: 810px;
     margin: auto;
     background-color: #F1F4F8 ;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
 
 }
 
 .header{
-    background-color: #3C4C5B;
+    background: linear-gradient(#3C4C5B, rgb(18, 32, 51) );
     color: white;
     padding: 10px 5px 10px 5px;
 }
@@ -69,7 +71,9 @@ input {
 #buttonMes{
     text-align: center;
     margin: 10px 10px 10px 620px;
-    padding: 100px;
+    padding: 10px 10px 10px 10px;
+    background-color: #0DC2DE;
+    border: none;
 
 }
 
@@ -84,5 +88,8 @@ h4{
 
 .buttonCon{
     margin: 20px 10px 10px 500px;
+    padding: 10px 10px 10px 10px;
+    background-color: #0DC2DE;
+    border: none;
 }
 
