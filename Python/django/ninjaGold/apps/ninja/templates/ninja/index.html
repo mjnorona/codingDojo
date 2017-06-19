@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load staticfiles %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel="stylesheet" href="{% static 'ninja/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+    <h1>Your Gold: {{ request.session.gold }}</h1>
+    <div class = "findGold">
+        <form action = "/process_money" class = "option" method = "post">
+            {% csrf_token %}
+            <h3>Farm</h3>
+            <p>(earns 10-20 golds)</p>
+            <input type = "hidden" name="action" value = "farm">
+            <input type = "submit" value = "Find Gold!">
+        </form>
+        <form action = "/process_money" class = "option" method = "post">
+            {% csrf_token %}
+            <h3>Cave</h3>
+            <p>(earns 5-10 golds)</p>
+            <input type = "hidden" name="action" value = "cave">
+            <input type = "submit" value = "Find Gold!">
+        </form>
+        <form action = "/process_money" class = "option" method = "post">
+            {% csrf_token %}
+            <h3>House</h3>
+            <p>(earns 2-5 golds)</p>
+            <input type = "hidden" name="action" value = "house">
+            <input type = "submit" value = "Find Gold!">
+        </form>
+        <form action = "/process_money" class = "option" method = "post">
+            {% csrf_token %}
+            <h3>Casino</h3>
+            <p>(earns/takes 0-50 golds)</p>
+            <input type = "hidden" name="action" value = "casino">
+            <input type = "submit" value = "Find Gold!">
+        </form>
+        <h2>Activies:</h2>
+        <div id = "results">
+
+            {% for i in request.session.activities %}
+            <p>{{ i }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <button><a href = "/reset">Reset</a></button>
+</body>
+</html>
