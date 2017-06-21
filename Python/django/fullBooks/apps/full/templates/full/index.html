@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+</head>
+<body>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+        </tr>
+        {% for item in list %}
+            <tr>
+                <th>{{ item.id }}</th>
+                <th>{{ item.title }}</th>
+                <th>{{ item.author }}</th>
+                <th>{{ item.category }}</th>
+            </tr>
+        {% endfor %}
+    </table>
+    <h1>Add a Book</h1>
+    <form action = "/submit" method = "post">
+        {% csrf_token %}
+        <label>Title</label>
+        <input type = "text" name = "title">
+        <label>Category</label>
+        <input type = "text" name = "category">
+        <label>Author</label>
+        <input type = "text" name = "author">
+        <button type = 'submit'>Submit!</button>
+    </form>
+</body>
+</html>
