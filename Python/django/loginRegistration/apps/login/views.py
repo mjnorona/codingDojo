@@ -51,7 +51,8 @@ def login(request):
     if request.method == "POST":
         login = User.userManager.login(request.POST['email'], request.POST['password'])
         print login
-        if login:
+        if login[0]:
+            request.session['name'] = login[1]
             return redirect('/success')
         else:
             messages.error(request, 'Email or password is incorrect')

@@ -42,15 +42,15 @@ class UserManager(models.Manager):
 
 
     def login(self, email, password):
-        logged = False
+        logged = [False]
         passedValues = []
         print User.userManager.filter(email=email).exists()
         if User.userManager.filter(email=email).exists():
             user = User.userManager.get(email = email)
             if not password == user.password:
-                logged = False
+                logged = [False]
             else:
-                logged = True
+                logged = [True, user.first_name]
         return logged
 
 
