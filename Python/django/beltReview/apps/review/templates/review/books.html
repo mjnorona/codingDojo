@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'review/css/books.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+    <div class = "container">
+        <div class = "header">
+            <h1>Welcome, {{ name }}!</h1>
+            <a href="/books/add">Add Book and Review</a>
+            <button><a href="/logout">Logout</a></button>
+        </div>
+        <div class = "content">
+            <h2>Recent Book Reviews:</h2>
+            <div class = "reviewList">
+                {% for review in reviews%}
+                    <div class = "review">
+                        <h3><a href="{% url 'book_reviews' id=review.book.id %}">{{review.book.title}}</a></h3>
+                        <div class = "bookContent"
+                            <p>Rating: {{review.rating}}/5</p>
+                            <p><a href="{% url 'user_reviews' id=review.user.id %}">{{review.user.first_name}}</a>{{review.content}}</p>
+                            <p><em>Posted on {{review.created_at}}</em></p>
+                        </div>
+                        {% if id == review.user.id %}
+                            <button><a href = "{% url 'review_delete' id=review.id %}">Delete</a></button>
+                        {% endif %}
+                    </div>
+                {% endfor%}
+            </div>
+        </div>
+        <div class = "sideSect">
+            <h2>Other Books with Reviews:</h2>
+            <div>
+                {% for book in books %}
+                    <p><a href="{% url 'book_reviews' id=book.id %}">{{book.title}}</a></p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

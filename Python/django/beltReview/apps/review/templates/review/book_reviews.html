@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'review/css/books.css' %}" media="screen" title="no title"  charset="utf-8">
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "header addHead">
+                <a href="/books">Home</a>
+                <button><a href="/logout">Logout</a></button>
+            </div>
+            <h1>{{title}}</h1>
+            <h3>Author: {{author}}</h3>
+            <div class = 'content'>
+                <h2>Reviews:</h2>
+                <hr>
+                <div class = "reviewList">
+                    {% for review in reviews %}
+                        <p>Rating: {{ review.rating }}/5</p>
+                        <p><a href = "{% url 'user_reviews' id=user %}">{{review.user.first_name}}</a> says {{review.content}}</p>
+                        <p><em>Posted on {{review.created_at}}</em></p>
+                        {% if user == review.user.id%}
+                            <button><a href = "{% url 'review_delete' id=review.id %}">Delete</a></button>
+                        {% endif %}
+                        <hr>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class ="sideSect">
+                <h2>Add a Review:</h2>
+                <form action = "/books/submit" method = "post">
+                    {% csrf_token %}
+                    <textarea rows="5" cols="70" name = "review"></textarea>
+                    <input type = "hidden" name = "title" value = "{{title}}">
+                    <input type = "hidden" name = "author" value = "{{author}}"
+                    <label>Review:</label>
+                    <select name = "rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
