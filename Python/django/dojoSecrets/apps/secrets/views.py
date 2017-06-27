@@ -36,10 +36,11 @@ def register(request):
 
             if successful:
 
-                User.objects.create(first_name=request.POST['first'], last_name=request.POST['last'],
+                user = User.objects.create(first_name=request.POST['first'], last_name=request.POST['last'],
                                         email=request.POST['email'], password=request.POST['password'])
                 request.session['first_name'] = request.POST['first']
                 request.session['last_name'] = request.POST['last']
+                request.session['id'] = user.id
                 return redirect('/secrets')
             else:
                 return redirect('/')
@@ -55,6 +56,8 @@ def login(request):
         if login[0]:
             request.session['first_name'] = login[1]
             request.session['last_name'] = login[2]
+            request.session['id'] = login[3]
+            
             # print request.session['last_name']
             return redirect('/secrets')
         else:
@@ -62,7 +65,14 @@ def login(request):
             return redirect('/')
 
 def secrets(request):
-    content = {'name' : request.session['first_name']}
+    secrets = Secret.objects.all().order_by('-created_at')
+    
+    content = {
+        'name' : request.session['first_name'],
+        'secrets': secrets,
+        'id': request.session['id'],
+        
+    }
     return render(request, 'secrets/secrets.html', content)
 
 def post(request):
@@ -70,3 +80,18 @@ def post(request):
         secret = Secret.objects.create(content = request.POST['content'], user = User.objects.get(first_name = request.session['first_name'], last_name = request.session['last_name']))
         print secret.content
     return redirect('/secrets')
+
+def like(request, id ):
+
+    like = Like.objects.create(secret = Secret.objects.get(id = id), user = User.objects.get(id = request.session['id']))
+    
+    print like.secret.id, like.user.id
+    return redirect('/secrets')
+    
+def popular(request):
+    secrets = Secret.objects.all().order_by('likes')
+    content = {
+        'secrets': secrets,
+        'id': request.session['id']
+    }
+    return render(request, 'secrets/popular.html', content)

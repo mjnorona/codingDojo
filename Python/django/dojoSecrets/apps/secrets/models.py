@@ -50,7 +50,7 @@ class UserManager(models.Manager):
             if not password == user.password:
                 logged = [False]
             else:
-                logged = [True, user.first_name, user.last_name]
+                logged = [True, user.first_name, user.last_name, user.id]
         return logged
 
 
@@ -71,4 +71,5 @@ class Secret(models.Model):
 
 class Like(models.Model):
     secret = models.ForeignKey(Secret, related_name = "likes")
+    user = models.ForeignKey(User, related_name = "likes")
     created_at = models.DateTimeField(auto_now_add = True)
