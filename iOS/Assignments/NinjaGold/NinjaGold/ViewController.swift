@@ -93,6 +93,10 @@ class ViewController: UIViewController {
     @IBAction func resetButtonPressed(_ sender: UIButton) {
         score = 0
         scoreLabel.text = String(score)
+        farmLabel.isHidden = true
+        caveLabel.isHidden = true
+        houseLabel.isHidden = true
+        casinoLabel.isHidden = true
     }
     
 
