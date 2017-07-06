@@ -115,7 +115,6 @@ def book_submit(request):
 
         review = Review.objects.create(content = request.POST['review'], rating = request.POST['rating'], book = book, user = User.objects.get(id = request.session['id']))
         print review.content, book.author.name
-
     return redirect('book_reviews', id = book.id)
 
 def book_reviews(request, id):

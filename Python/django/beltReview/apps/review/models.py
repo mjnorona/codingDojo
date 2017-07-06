@@ -61,7 +61,7 @@ class User(models.Model):
     password = models.CharField(max_length=30)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now_add=True)
-    objects = UserManager()
+    objectns = UserManager()
 
 class Author(models.Model):
     name = models.CharField(max_length = 30)
