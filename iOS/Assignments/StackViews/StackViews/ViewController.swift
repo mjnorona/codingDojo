@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         print("goes here")
         player = 1
         boxValues = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-        for i in 1...10 {
+        for i in 1...9 {
             print(i)
             var tmpButton = self.view.viewWithTag(i) as? UIButton
             tmpButton?.backgroundColor = UIColor.gray

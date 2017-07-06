@@ -7,46 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50FC809D1F0DDD500089821A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC809C1F0DDD500089821A /* AppDelegate.swift */; };
-		50FC809F1F0DDD500089821A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC809E1F0DDD500089821A /* ViewController.swift */; };
-		50FC80A21F0DDD500089821A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FC80A01F0DDD500089821A /* Main.storyboard */; };
-		50FC80A41F0DDD500089821A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50FC80A31F0DDD500089821A /* Assets.xcassets */; };
-		50FC80A71F0DDD500089821A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FC80A51F0DDD500089821A /* LaunchScreen.storyboard */; };
-		50FC80B21F0DDD500089821A /* StackViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC80B11F0DDD500089821A /* StackViewsTests.swift */; };
+		50FC80C91F0EBD090089821A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC80C81F0EBD090089821A /* AppDelegate.swift */; };
+		50FC80CB1F0EBD090089821A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC80CA1F0EBD090089821A /* ViewController.swift */; };
+		50FC80CE1F0EBD090089821A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FC80CC1F0EBD090089821A /* Main.storyboard */; };
+		50FC80D01F0EBD090089821A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50FC80CF1F0EBD090089821A /* Assets.xcassets */; };
+		50FC80D31F0EBD090089821A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FC80D11F0EBD090089821A /* LaunchScreen.storyboard */; };
+		50FC80DE1F0EBD090089821A /* TipsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC80DD1F0EBD090089821A /* TipsterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		50FC80AE1F0DDD500089821A /* PBXContainerItemProxy */ = {
+		50FC80DA1F0EBD090089821A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 50FC80911F0DDD500089821A /* Project object */;
+			containerPortal = 50FC80BD1F0EBD090089821A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 50FC80981F0DDD500089821A;
-			remoteInfo = StackViews;
+			remoteGlobalIDString = 50FC80C41F0EBD090089821A;
+			remoteInfo = Tipster;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		50FC80991F0DDD500089821A /* StackViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		50FC809C1F0DDD500089821A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50FC809E1F0DDD500089821A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		50FC80A11F0DDD500089821A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		50FC80A31F0DDD500089821A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		50FC80A61F0DDD500089821A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		50FC80A81F0DDD500089821A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50FC80AD1F0DDD500089821A /* StackViewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackViewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		50FC80B11F0DDD500089821A /* StackViewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewsTests.swift; sourceTree = "<group>"; };
-		50FC80B31F0DDD500089821A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50FC80C51F0EBD090089821A /* Tipster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50FC80C81F0EBD090089821A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50FC80CA1F0EBD090089821A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50FC80CD1F0EBD090089821A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		50FC80CF1F0EBD090089821A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50FC80D21F0EBD090089821A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		50FC80D41F0EBD090089821A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50FC80D91F0EBD090089821A /* TipsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50FC80DD1F0EBD090089821A /* TipsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsterTests.swift; sourceTree = "<group>"; };
+		50FC80DF1F0EBD090089821A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		50FC80961F0DDD500089821A /* Frameworks */ = {
+		50FC80C21F0EBD090089821A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50FC80AA1F0DDD500089821A /* Frameworks */ = {
+		50FC80D61F0EBD090089821A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,106 +56,106 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		50FC80901F0DDD500089821A = {
+		50FC80BC1F0EBD090089821A = {
 			isa = PBXGroup;
 			children = (
-				50FC809B1F0DDD500089821A /* StackViews */,
-				50FC80B01F0DDD500089821A /* StackViewsTests */,
-				50FC809A1F0DDD500089821A /* Products */,
+				50FC80C71F0EBD090089821A /* Tipster */,
+				50FC80DC1F0EBD090089821A /* TipsterTests */,
+				50FC80C61F0EBD090089821A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		50FC809A1F0DDD500089821A /* Products */ = {
+		50FC80C61F0EBD090089821A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50FC80991F0DDD500089821A /* StackViews.app */,
-				50FC80AD1F0DDD500089821A /* StackViewsTests.xctest */,
+				50FC80C51F0EBD090089821A /* Tipster.app */,
+				50FC80D91F0EBD090089821A /* TipsterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		50FC809B1F0DDD500089821A /* StackViews */ = {
+		50FC80C71F0EBD090089821A /* Tipster */ = {
 			isa = PBXGroup;
 			children = (
-				50FC809C1F0DDD500089821A /* AppDelegate.swift */,
-				50FC809E1F0DDD500089821A /* ViewController.swift */,
-				50FC80A01F0DDD500089821A /* Main.storyboard */,
-				50FC80A31F0DDD500089821A /* Assets.xcassets */,
-				50FC80A51F0DDD500089821A /* LaunchScreen.storyboard */,
-				50FC80A81F0DDD500089821A /* Info.plist */,
+				50FC80C81F0EBD090089821A /* AppDelegate.swift */,
+				50FC80CA1F0EBD090089821A /* ViewController.swift */,
+				50FC80CC1F0EBD090089821A /* Main.storyboard */,
+				50FC80CF1F0EBD090089821A /* Assets.xcassets */,
+				50FC80D11F0EBD090089821A /* LaunchScreen.storyboard */,
+				50FC80D41F0EBD090089821A /* Info.plist */,
 			);
-			path = StackViews;
+			path = Tipster;
 			sourceTree = "<group>";
 		};
-		50FC80B01F0DDD500089821A /* StackViewsTests */ = {
+		50FC80DC1F0EBD090089821A /* TipsterTests */ = {
 			isa = PBXGroup;
 			children = (
-				50FC80B11F0DDD500089821A /* StackViewsTests.swift */,
-				50FC80B31F0DDD500089821A /* Info.plist */,
+				50FC80DD1F0EBD090089821A /* TipsterTests.swift */,
+				50FC80DF1F0EBD090089821A /* Info.plist */,
 			);
-			path = StackViewsTests;
+			path = TipsterTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		50FC80981F0DDD500089821A /* StackViews */ = {
+		50FC80C41F0EBD090089821A /* Tipster */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50FC80B61F0DDD500089821A /* Build configuration list for PBXNativeTarget "StackViews" */;
+			buildConfigurationList = 50FC80E21F0EBD090089821A /* Build configuration list for PBXNativeTarget "Tipster" */;
 			buildPhases = (
-				50FC80951F0DDD500089821A /* Sources */,
-				50FC80961F0DDD500089821A /* Frameworks */,
-				50FC80971F0DDD500089821A /* Resources */,
+				50FC80C11F0EBD090089821A /* Sources */,
+				50FC80C21F0EBD090089821A /* Frameworks */,
+				50FC80C31F0EBD090089821A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = StackViews;
-			productName = StackViews;
-			productReference = 50FC80991F0DDD500089821A /* StackViews.app */;
+			name = Tipster;
+			productName = Tipster;
+			productReference = 50FC80C51F0EBD090089821A /* Tipster.app */;
 			productType = "com.apple.product-type.application";
 		};
-		50FC80AC1F0DDD500089821A /* StackViewsTests */ = {
+		50FC80D81F0EBD090089821A /* TipsterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50FC80B91F0DDD500089821A /* Build configuration list for PBXNativeTarget "StackViewsTests" */;
+			buildConfigurationList = 50FC80E51F0EBD090089821A /* Build configuration list for PBXNativeTarget "TipsterTests" */;
 			buildPhases = (
-				50FC80A91F0DDD500089821A /* Sources */,
-				50FC80AA1F0DDD500089821A /* Frameworks */,
-				50FC80AB1F0DDD500089821A /* Resources */,
+				50FC80D51F0EBD090089821A /* Sources */,
+				50FC80D61F0EBD090089821A /* Frameworks */,
+				50FC80D71F0EBD090089821A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				50FC80AF1F0DDD500089821A /* PBXTargetDependency */,
+				50FC80DB1F0EBD090089821A /* PBXTargetDependency */,
 			);
-			name = StackViewsTests;
-			productName = StackViewsTests;
-			productReference = 50FC80AD1F0DDD500089821A /* StackViewsTests.xctest */;
+			name = TipsterTests;
+			productName = TipsterTests;
+			productReference = 50FC80D91F0EBD090089821A /* TipsterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		50FC80911F0DDD500089821A /* Project object */ = {
+		50FC80BD1F0EBD090089821A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "MJ Norona";
 				TargetAttributes = {
-					50FC80981F0DDD500089821A = {
+					50FC80C41F0EBD090089821A = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 					};
-					50FC80AC1F0DDD500089821A = {
+					50FC80D81F0EBD090089821A = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 50FC80981F0DDD500089821A;
+						TestTargetID = 50FC80C41F0EBD090089821A;
 					};
 				};
 			};
-			buildConfigurationList = 50FC80941F0DDD500089821A /* Build configuration list for PBXProject "StackViews" */;
+			buildConfigurationList = 50FC80C01F0EBD090089821A /* Build configuration list for PBXProject "Tipster" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -163,29 +163,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 50FC80901F0DDD500089821A;
-			productRefGroup = 50FC809A1F0DDD500089821A /* Products */;
+			mainGroup = 50FC80BC1F0EBD090089821A;
+			productRefGroup = 50FC80C61F0EBD090089821A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50FC80981F0DDD500089821A /* StackViews */,
-				50FC80AC1F0DDD500089821A /* StackViewsTests */,
+				50FC80C41F0EBD090089821A /* Tipster */,
+				50FC80D81F0EBD090089821A /* TipsterTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		50FC80971F0DDD500089821A /* Resources */ = {
+		50FC80C31F0EBD090089821A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50FC80A71F0DDD500089821A /* LaunchScreen.storyboard in Resources */,
-				50FC80A41F0DDD500089821A /* Assets.xcassets in Resources */,
-				50FC80A21F0DDD500089821A /* Main.storyboard in Resources */,
+				50FC80D31F0EBD090089821A /* LaunchScreen.storyboard in Resources */,
+				50FC80D01F0EBD090089821A /* Assets.xcassets in Resources */,
+				50FC80CE1F0EBD090089821A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50FC80AB1F0DDD500089821A /* Resources */ = {
+		50FC80D71F0EBD090089821A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -195,46 +195,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		50FC80951F0DDD500089821A /* Sources */ = {
+		50FC80C11F0EBD090089821A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50FC809F1F0DDD500089821A /* ViewController.swift in Sources */,
-				50FC809D1F0DDD500089821A /* AppDelegate.swift in Sources */,
+				50FC80CB1F0EBD090089821A /* ViewController.swift in Sources */,
+				50FC80C91F0EBD090089821A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50FC80A91F0DDD500089821A /* Sources */ = {
+		50FC80D51F0EBD090089821A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50FC80B21F0DDD500089821A /* StackViewsTests.swift in Sources */,
+				50FC80DE1F0EBD090089821A /* TipsterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		50FC80AF1F0DDD500089821A /* PBXTargetDependency */ = {
+		50FC80DB1F0EBD090089821A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 50FC80981F0DDD500089821A /* StackViews */;
-			targetProxy = 50FC80AE1F0DDD500089821A /* PBXContainerItemProxy */;
+			target = 50FC80C41F0EBD090089821A /* Tipster */;
+			targetProxy = 50FC80DA1F0EBD090089821A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		50FC80A01F0DDD500089821A /* Main.storyboard */ = {
+		50FC80CC1F0EBD090089821A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				50FC80A11F0DDD500089821A /* Base */,
+				50FC80CD1F0EBD090089821A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		50FC80A51F0DDD500089821A /* LaunchScreen.storyboard */ = {
+		50FC80D11F0EBD090089821A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				50FC80A61F0DDD500089821A /* Base */,
+				50FC80D21F0EBD090089821A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		50FC80B41F0DDD500089821A /* Debug */ = {
+		50FC80E01F0EBD090089821A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -293,7 +293,7 @@
 			};
 			name = Debug;
 		};
-		50FC80B51F0DDD500089821A /* Release */ = {
+		50FC80E11F0EBD090089821A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -337,87 +337,87 @@
 			};
 			name = Release;
 		};
-		50FC80B71F0DDD500089821A /* Debug */ = {
+		50FC80E31F0EBD090089821A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = StackViews/Info.plist;
+				INFOPLIST_FILE = Tipster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.StackViews;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Tipster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		50FC80B81F0DDD500089821A /* Release */ = {
+		50FC80E41F0EBD090089821A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = StackViews/Info.plist;
+				INFOPLIST_FILE = Tipster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.StackViews;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Tipster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		50FC80BA1F0DDD500089821A /* Debug */ = {
+		50FC80E61F0EBD090089821A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = StackViewsTests/Info.plist;
+				INFOPLIST_FILE = TipsterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.StackViewsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TipsterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StackViews.app/StackViews";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tipster.app/Tipster";
 			};
 			name = Debug;
 		};
-		50FC80BB1F0DDD500089821A /* Release */ = {
+		50FC80E71F0EBD090089821A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = StackViewsTests/Info.plist;
+				INFOPLIST_FILE = TipsterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.StackViewsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TipsterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StackViews.app/StackViews";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tipster.app/Tipster";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50FC80941F0DDD500089821A /* Build configuration list for PBXProject "StackViews" */ = {
+		50FC80C01F0EBD090089821A /* Build configuration list for PBXProject "Tipster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50FC80B41F0DDD500089821A /* Debug */,
-				50FC80B51F0DDD500089821A /* Release */,
+				50FC80E01F0EBD090089821A /* Debug */,
+				50FC80E11F0EBD090089821A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50FC80B61F0DDD500089821A /* Build configuration list for PBXNativeTarget "StackViews" */ = {
+		50FC80E21F0EBD090089821A /* Build configuration list for PBXNativeTarget "Tipster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50FC80B71F0DDD500089821A /* Debug */,
-				50FC80B81F0DDD500089821A /* Release */,
+				50FC80E31F0EBD090089821A /* Debug */,
+				50FC80E41F0EBD090089821A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		50FC80B91F0DDD500089821A /* Build configuration list for PBXNativeTarget "StackViewsTests" */ = {
+		50FC80E51F0EBD090089821A /* Build configuration list for PBXNativeTarget "TipsterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50FC80BA1F0DDD500089821A /* Debug */,
-				50FC80BB1F0DDD500089821A /* Release */,
+				50FC80E61F0EBD090089821A /* Debug */,
+				50FC80E71F0EBD090089821A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 50FC80911F0DDD500089821A /* Project object */;
+	rootObject = 50FC80BD1F0EBD090089821A /* Project object */;
 }

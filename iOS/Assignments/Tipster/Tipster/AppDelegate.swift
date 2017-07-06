@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  StackViews
+//  Tipster
 //
-//  Created by MJ Norona on 7/5/17.
+//  Created by MJ Norona on 7/6/17.
 //  Copyright © 2017 MJ Norona. All rights reserved.
 //
 

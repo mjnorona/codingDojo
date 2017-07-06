@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "50FC80981F0DDD500089821A"
-               BuildableName = "StackViews.app"
-               BlueprintName = "StackViews"
-               ReferencedContainer = "container:StackViews.xcodeproj">
+               BlueprintIdentifier = "50FC80C41F0EBD090089821A"
+               BuildableName = "Tipster.app"
+               BlueprintName = "Tipster"
+               ReferencedContainer = "container:Tipster.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "50FC80AC1F0DDD500089821A"
-               BuildableName = "StackViewsTests.xctest"
-               BlueprintName = "StackViewsTests"
-               ReferencedContainer = "container:StackViews.xcodeproj">
+               BlueprintIdentifier = "50FC80D81F0EBD090089821A"
+               BuildableName = "TipsterTests.xctest"
+               BlueprintName = "TipsterTests"
+               ReferencedContainer = "container:Tipster.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "50FC80981F0DDD500089821A"
-            BuildableName = "StackViews.app"
-            BlueprintName = "StackViews"
-            ReferencedContainer = "container:StackViews.xcodeproj">
+            BlueprintIdentifier = "50FC80C41F0EBD090089821A"
+            BuildableName = "Tipster.app"
+            BlueprintName = "Tipster"
+            ReferencedContainer = "container:Tipster.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,10 +65,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "50FC80981F0DDD500089821A"
-            BuildableName = "StackViews.app"
-            BlueprintName = "StackViews"
-            ReferencedContainer = "container:StackViews.xcodeproj">
+            BlueprintIdentifier = "50FC80C41F0EBD090089821A"
+            BuildableName = "Tipster.app"
+            BlueprintName = "Tipster"
+            ReferencedContainer = "container:Tipster.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -84,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "50FC80981F0DDD500089821A"
-            BuildableName = "StackViews.app"
-            BlueprintName = "StackViews"
-            ReferencedContainer = "container:StackViews.xcodeproj">
+            BlueprintIdentifier = "50FC80C41F0EBD090089821A"
+            BuildableName = "Tipster.app"
+            BlueprintName = "Tipster"
+            ReferencedContainer = "container:Tipster.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

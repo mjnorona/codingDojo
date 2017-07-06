@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>StackViews.xcscheme</key>
+		<key>Tipster.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>50FC80981F0DDD500089821A</key>
+		<key>50FC80C41F0EBD090089821A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>50FC80AC1F0DDD500089821A</key>
+		<key>50FC80D81F0EBD090089821A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

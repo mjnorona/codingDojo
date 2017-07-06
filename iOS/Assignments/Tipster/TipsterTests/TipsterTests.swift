@@ -1,15 +1,15 @@
 //
-//  StackViewsTests.swift
-//  StackViewsTests
+//  TipsterTests.swift
+//  TipsterTests
 //
-//  Created by MJ Norona on 7/5/17.
+//  Created by MJ Norona on 7/6/17.
 //  Copyright © 2017 MJ Norona. All rights reserved.
 //
 
 import XCTest
-@testable import StackViews
+@testable import Tipster
 
-class StackViewsTests: XCTestCase {
+class TipsterTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

@@ -22,13 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BMv-Rr-BVT">
-                                <rect key="frame" x="172" y="70" width="31.5" height="20.5"/>
+                                <rect key="frame" x="144.5" y="70" width="87.5" height="20.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QSq-vF-D6W">
-                                        <rect key="frame" x="0.0" y="0.0" width="31.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TTT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShY-n4-xM2">
-                                                <rect key="frame" x="0.0" y="0.0" width="31.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShY-n4-xM2">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -37,36 +37,13 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MI5-SW-SGw">
-                                <rect key="frame" x="0.0" y="586" width="375" height="61"/>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boh-Xy-FhR">
-                                <rect key="frame" x="166" y="601" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Reset"/>
-                                <connections>
-                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cd4-br-FUd"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="90x-R1-1ZP">
-                                <rect key="frame" x="137.5" y="506" width="100.5" height="20.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dGF-WC-k4z">
+                                <rect key="frame" x="112" y="258.5" width="150" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Winner Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-43-3Lc">
-                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dGF-WC-k4z">
-                                <rect key="frame" x="112" y="121" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2o2-7b-wF7">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2o2-7b-wF7">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHR-hI-3xb">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHR-hI-3xb">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" red="0.48666207900000003" green="0.48666207900000003" blue="0.48666207900000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" red="0.48666207901554404" green="0.48666207901554404" blue="0.48666207901554404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -74,14 +51,14 @@
                                                     <action selector="ticButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MW0-Sr-wPQ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lla-pI-Y7S">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lla-pI-Y7S">
                                                 <rect key="frame" x="60" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" red="0.48666207900000003" green="0.48666207900000003" blue="0.48666207900000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="ticButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Xv-N3-7F8"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx2-cv-Dvn">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx2-cv-Dvn">
                                                 <rect key="frame" x="120" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" red="0.48666207900000003" green="0.48666207900000003" blue="0.48666207900000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
@@ -90,24 +67,24 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="UKO-2L-LT3">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="UKO-2L-LT3">
                                         <rect key="frame" x="0.0" y="60" width="150" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wew-f0-6cL">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wew-f0-6cL">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" red="0.48666207900000003" green="0.48666207900000003" blue="0.48666207900000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="ticButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IkY-2l-4PX"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDx-de-GT6">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDx-de-GT6">
                                                 <rect key="frame" x="60" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" red="0.48666207900000003" green="0.48666207900000003" blue="0.48666207900000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="ticButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGS-xi-vgj"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="6" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHm-Da-BJz">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHm-Da-BJz">
                                                 <rect key="frame" x="120" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" red="0.48666207900000003" green="0.48666207900000003" blue="0.48666207900000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
@@ -116,33 +93,56 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0Kb-hr-5Ww">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0Kb-hr-5Ww">
                                         <rect key="frame" x="0.0" y="120" width="150" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" tag="7" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7H-au-CaC">
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7H-au-CaC">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" red="0.48666207900000003" green="0.48666207900000003" blue="0.48666207900000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="ticButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kgn-UO-2VT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="8" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtg-v3-65V">
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaO-8S-pio">
                                                 <rect key="frame" x="60" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.48666207900000003" green="0.48666207900000003" blue="0.48666207900000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="ticButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pGn-fv-wmu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtg-v3-65V">
+                                                <rect key="frame" x="120" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" red="0.48666207900000003" green="0.48666207900000003" blue="0.48666207900000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" red="0.48666207900000003" green="0.48666207900000003" blue="0.48666207900000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="ticButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bY0-35-qjc"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="9" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaO-8S-pio">
-                                                <rect key="frame" x="120" y="0.0" width="30" height="30"/>
-                                                <color key="backgroundColor" red="0.48666207900000003" green="0.48666207900000003" blue="0.48666207900000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <connections>
-                                                    <action selector="ticButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pGn-fv-wmu"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                     </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="90x-R1-1ZP">
+                                <rect key="frame" x="137" y="506" width="100.5" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-43-3Lc">
+                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4uH-7A-YOW">
+                                <rect key="frame" x="169" y="587" width="39" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boh-Xy-FhR">
+                                        <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cd4-br-FUd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -150,10 +150,13 @@
                         <constraints>
                             <constraint firstItem="90x-R1-1ZP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Zv-2K-IUn"/>
                             <constraint firstItem="BMv-Rr-BVT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2U5-rR-Xkv"/>
-                            <constraint firstItem="MI5-SW-SGw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="10" id="Fyo-uI-vkc"/>
-                            <constraint firstItem="MI5-SW-SGw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UdU-oM-Ehe"/>
-                            <constraint firstItem="MI5-SW-SGw" firstAttribute="top" secondItem="90x-R1-1ZP" secondAttribute="bottom" constant="50" id="a82-yv-r5y"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4uH-7A-YOW" secondAttribute="bottom" constant="79" id="5bO-fZ-F9P"/>
+                            <constraint firstItem="4uH-7A-YOW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="GLe-xF-J2b"/>
+                            <constraint firstItem="dGF-WC-k4z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OuR-QZ-TpH"/>
                             <constraint firstItem="BMv-Rr-BVT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="amp-eh-Nop"/>
+                            <constraint firstItem="dGF-WC-k4z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bN8-HH-6Ve"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4uH-7A-YOW" secondAttribute="bottom" constant="50" id="kN1-Yt-t8w"/>
+                            <constraint firstItem="tB7-43-3Lc" firstAttribute="top" secondItem="dGF-WC-k4z" secondAttribute="bottom" constant="97.5" id="kX3-MI-1R5"/>
                             <constraint firstItem="BMv-Rr-BVT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="pI4-zu-Wof"/>
                         </constraints>
                     </view>
