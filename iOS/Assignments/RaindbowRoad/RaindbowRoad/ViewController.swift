@@ -17,8 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
-        tableView.rowHeight = 120
-        print(tableView.contentSize.height)
+        tableView.rowHeight = tableView.frame.size.height/6
+        print(tableView.frame.size.height)
     }
 
     override func didReceiveMemoryWarning() {

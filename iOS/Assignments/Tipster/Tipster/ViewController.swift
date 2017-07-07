@@ -91,19 +91,19 @@ class ViewController: UIViewController {
     }
     
     func updateLabels() {
-        let tip1 = (inputValue * tip1Percentage)
-        let tip2 = (inputValue * tip2Percentage)
-        let tip3 = (inputValue * tip3Percentage)
+        let tip1 = (inputValue * tip1Percentage)/groupSize
+        let tip2 = (inputValue * tip2Percentage)/groupSize
+        let tip3 = (inputValue * tip3Percentage)/groupSize
         
         //reset tip values
-        tip1Label.text = String(format: "%.2f", tip1/groupSize)
-        tip2Label.text = String(format: "%.2f", tip2/groupSize)
-        tip3Label.text = String(format: "%.2f", tip3/groupSize)
+        tip1Label.text = String(format: "%.2f", tip1)
+        tip2Label.text = String(format: "%.2f", tip2)
+        tip3Label.text = String(format: "%.2f", tip3)
         
         //reset result values
-        result1Label.text = String(format: "%.2f", (tip1 + inputValue)/groupSize)
-        result2Label.text = String(format: "%.2f", (tip2 + inputValue)/groupSize)
-        result3Label.text = String(format: "%.2f", (tip3 + inputValue)/groupSize)
+        result1Label.text = String(format: "%.2f", (tip1 + inputValue))
+        result2Label.text = String(format: "%.2f", (tip2 + inputValue))
+        result3Label.text = String(format: "%.2f", (tip3 + inputValue))
     }
     
     
@@ -120,7 +120,6 @@ class ViewController: UIViewController {
         result1Label.text = "0.00"
         result2Label.text = "0.00"
         result3Label.text = "0.00"
-        
     }
 
     override func didReceiveMemoryWarning() {

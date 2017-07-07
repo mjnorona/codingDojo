@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,13 +33,22 @@ extension ViewController: UITableViewDataSource {
         return names.count
     }
     
+    func tableViewHeight() -> CGFloat {
+        tableView.layoutIfNeeded()
+        
+        return tableView.contentSize.height
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let rand = Int(arc4random_uniform(91) + 5)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
-        cell.textLabel?.text = "\(names[indexPath.row]) \(rand) years old"
-        cell.detailTextLabel?.text = String(indexPath.row)
+        var cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier")
+        if cell == nil {
+            cell = UITableViewCell(style: .value1, reuseIdentifier: "reuseIdentifier")
+        }
+        cell?.textLabel?.text = "\(names[indexPath.row])"
+        cell?.detailTextLabel?.text = "\(rand) years old"
         
-        return cell
+        return cell!
     }
 }
 
