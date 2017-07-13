@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="96r-PO-RMd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="TYx-TH-N1C">
+            <objects>
+                <viewController id="96r-PO-RMd" customClass="ViewController" customModule="BinaryCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1eE-We-8MC"/>
+                        <viewControllerLayoutGuide type="bottom" id="iaL-pt-Hrx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LMp-Ss-f7o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dBD-yF-a3E">
+                                <rect key="frame" x="0.0" y="35" width="375" height="596"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" id="cuQ-IV-nFD" customClass="CustomCell" customModule="BinaryCounter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cuQ-IV-nFD" id="Dx3-Fi-dcN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQP-VL-QhT">
+                                                    <rect key="frame" x="337" y="7" width="30" height="30"/>
+                                                    <state key="normal" title="+"/>
+                                                    <connections>
+                                                        <action selector="addButtonPressed:" destination="cuQ-IV-nFD" eventType="touchUpInside" id="Dhx-0t-qIL"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yb2-B0-tW2">
+                                                    <rect key="frame" x="8" y="7" width="30" height="30"/>
+                                                    <state key="normal" title="-"/>
+                                                    <connections>
+                                                        <action selector="subtractButtonPressed:" destination="cuQ-IV-nFD" eventType="touchUpInside" id="BEH-wM-fuV"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNY-CP-1Fo">
+                                                    <rect key="frame" x="46" y="12" width="283" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yb2-B0-tW2" firstAttribute="centerY" secondItem="Dx3-Fi-dcN" secondAttribute="centerY" id="CQH-Xc-Ocb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yQP-VL-QhT" secondAttribute="trailing" id="KLR-HU-ebf"/>
+                                                <constraint firstItem="yQP-VL-QhT" firstAttribute="centerY" secondItem="Dx3-Fi-dcN" secondAttribute="centerY" id="YbX-3n-cqo"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="yb2-B0-tW2" secondAttribute="leading" id="lXZ-co-JYL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="numberLabel" destination="UNY-CP-1Fo" id="lrG-Ox-s55"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="96r-PO-RMd" id="e60-B8-0CD"/>
+                                    <outlet property="delegate" destination="96r-PO-RMd" id="DxL-qa-tBj"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqr-30-V70">
+                                <rect key="frame" x="0.0" y="631" width="375" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iaL-pt-Hrx" firstAttribute="top" secondItem="Aqr-30-V70" secondAttribute="bottom" id="00z-Fa-5TE"/>
+                            <constraint firstItem="dBD-yF-a3E" firstAttribute="top" secondItem="1eE-We-8MC" secondAttribute="bottom" constant="15" id="6la-O3-xGz"/>
+                            <constraint firstAttribute="trailing" secondItem="dBD-yF-a3E" secondAttribute="trailing" id="DwN-Ic-SkQ"/>
+                            <constraint firstItem="Aqr-30-V70" firstAttribute="trailing" secondItem="LMp-Ss-f7o" secondAttribute="trailingMargin" constant="16" id="QYI-Pg-oXz"/>
+                            <constraint firstItem="dBD-yF-a3E" firstAttribute="leading" secondItem="LMp-Ss-f7o" secondAttribute="leading" id="RUv-dP-wjW"/>
+                            <constraint firstItem="Aqr-30-V70" firstAttribute="top" secondItem="dBD-yF-a3E" secondAttribute="bottom" id="X6x-za-I4M"/>
+                            <constraint firstItem="Aqr-30-V70" firstAttribute="leading" secondItem="LMp-Ss-f7o" secondAttribute="leadingMargin" constant="-16" id="aoD-lv-fkR"/>
+                            <constraint firstItem="Aqr-30-V70" firstAttribute="top" secondItem="dBD-yF-a3E" secondAttribute="bottom" id="uUV-RI-x77"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sumLabel" destination="Aqr-30-V70" id="GHR-wP-8je"/>
+                        <outlet property="tableView" destination="dBD-yF-a3E" id="BC4-MQ-Ghd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gj9-Y9-x8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-383.19999999999999" y="-1.3493253373313345"/>
+        </scene>
+    </scenes>
+</document>
