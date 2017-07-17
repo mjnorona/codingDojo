@@ -9,8 +9,11 @@
 import UIKit
 
 class FilmViewController: UITableViewController {
-    var urls = [String]()
+    
     var films = [Any]()
+    var releaseDate = [Any]()
+    var director = [Any]()
+    var opening = [Any]()
     
     
     
@@ -22,9 +25,14 @@ class FilmViewController: UITableViewController {
                 // Try converting the JSON object to "Foundation Types" (NSDictionary, NSArray, NSString, etc.)
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                     if let results = jsonResult["results"] as? NSArray {
-                        for person in results {
-                            let filmDict = person as! NSDictionary
+                        print(results)
+                        for film in results {
+                            let filmDict = film as! NSDictionary
+                            print(filmDict["release_date"])
                             self.films.append(filmDict["title"]! as! String)
+                            self.releaseDate.append(filmDict["release_date"]! as! String)
+                            self.director.append(filmDict["director"]! as! String)
+                            self.opening.append(filmDict["opening_crawl"]! as! String)
                         }
                     }
                 }
@@ -35,8 +43,28 @@ class FilmViewController: UITableViewController {
                 print("Something went wrong")
             }
         })
+        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "filmSegue" {
+            let indexPath = sender as! NSIndexPath
+            
+            let navigationController = segue.destination as! UINavigationController
+            let filmDescriptionViewController = navigationController.topViewController as! FilmDescriptionViewController
+            
+            filmDescriptionViewController.film = films[indexPath.row] as! String
+            filmDescriptionViewController.releaseDate = releaseDate[indexPath.row] as! String
+            filmDescriptionViewController.director = director[indexPath.row] as! String
+            filmDescriptionViewController.opening = opening[indexPath.row] as! String
+        }
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        
+        performSegue(withIdentifier: "filmSegue", sender: indexPath)
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,5 +86,7 @@ class FilmViewController: UITableViewController {
         return cell
     }
 
-
+    @IBAction func unwindFilm(segue: UIStoryboardSegue) {
+        
+    }
 }

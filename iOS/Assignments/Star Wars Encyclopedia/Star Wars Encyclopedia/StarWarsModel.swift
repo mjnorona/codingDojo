@@ -19,7 +19,7 @@ class StarWarsModel {
         // Actually "execute" the task. This is the line that actually makes the request that we set up above
         task.resume()
     }
-    
+
     static func getAllFilms(completionHandler:@escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
         // Specify the url that we will be sending the GET Request to
         let url = URL(string: "http://swapi.co/api/films/")

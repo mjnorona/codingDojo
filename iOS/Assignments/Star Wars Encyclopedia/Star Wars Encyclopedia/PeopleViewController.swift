@@ -10,6 +10,9 @@ import UIKit
 class PeopleViewController: UITableViewController {
     // Hardcoded data for now
     var people = [Any]()
+    var gender = [Any]()
+    var birth = [Any]()
+    var mass = [Any]()
     
     
     
@@ -21,9 +24,14 @@ class PeopleViewController: UITableViewController {
                 // Try converting the JSON object to "Foundation Types" (NSDictionary, NSArray, NSString, etc.)
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                     if let results = jsonResult["results"] as? NSArray {
+                        
                         for person in results {
                             let personDict = person as! NSDictionary
                             self.people.append(personDict["name"]! as! String)
+                            self.gender.append(personDict["gender"]!)
+                            self.birth.append(personDict["birth_year"]!)
+                            self.mass.append(personDict["mass"]!)
+                            
                         }
                     }
                 }
@@ -34,6 +42,28 @@ class PeopleViewController: UITableViewController {
                 print("Something went wrong")
             }
         })
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "personSegue" {
+            let indexPath = sender as! NSIndexPath
+            
+            let navigationController = segue.destination as! UINavigationController
+            let personDescriptionViewController = navigationController.topViewController as! PersonDescriptionViewController
+            
+            personDescriptionViewController.name = self.people[indexPath.row] as! String
+            personDescriptionViewController.gender = self.gender[indexPath.row] as! String
+            personDescriptionViewController.birth = self.birth[indexPath.row] as! String
+            personDescriptionViewController.mass = self.mass[indexPath.row] as! String
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        
+        performSegue(withIdentifier: "personSegue", sender: indexPath)
+        
     }
     
     
@@ -55,6 +85,10 @@ class PeopleViewController: UITableViewController {
         cell.textLabel?.text = people[indexPath.row] as! String
         // return the cell so that it can be rendered
         return cell
+    }
+    
+    @IBAction func unwindPerson(segue: UIStoryboardSegue) {
+        
     }
 }
 
