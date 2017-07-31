@@ -13,6 +13,7 @@ class BucketListViewController: UITableViewController, AddItemTableViewControlle
 
     var items = [BucketListItem]()
     
+    
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
@@ -91,6 +92,7 @@ class BucketListViewController: UITableViewController, AddItemTableViewControlle
     
     func itemSaved(by controller: AddItemTableViewController, with text: String, at indexPath: NSIndexPath?) {
         if let ip = indexPath{
+            print("updatedc")
             let item = items[ip.row]
             item.text = text
         } else {

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <script>
+            function star_string(n){
+                var stars = ""
+                for (var i =0 ; i < n; i++){
+                    stars += "*"
+                }
+                return stars
+            }
+            console.log(star_string(8))
+
+            function draw_stars(arr) {
+                for (var i = 0; i < arr.length; i++) {
+                    console.log(star_string(arr[i]))
+                }
+            }
+
+            
+
+            draw_stars([3,6,2,6,7])
+
+
+            function letters(input) {
+                var output = ""
+                var character = input[0].toLowerCase()
+                for (var i = 0; i < input.length; i++) {
+                    output += character
+                }
+                return output
+            }
+
+            console.log(letters("Hello"))
+
+            function mod_draw_stars(arr) {
+                for (var i = 0; i < arr.length; i++) {
+                    if (typeof(arr[i]) == "string") {
+                        console.log(letters(arr[i]))
+                    } else {
+                        console.log(star_string(arr[i]))
+                    }
+                }
+            }
+
+            mod_draw_stars([4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"])
+        </script>
+    </body>
+</html>

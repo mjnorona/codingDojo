@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		506801C11F1E850E00921167 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506801C01F1E850E00921167 /* TaskModel.swift */; };
 		506AEF5B1F159E1C00693986 /* BucketList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 506AEF591F159E1C00693986 /* BucketList.xcdatamodeld */; };
 		50EF13091F141E2700342822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF13081F141E2700342822 /* AppDelegate.swift */; };
 		50EF130B1F141E2700342822 /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF130A1F141E2700342822 /* BucketListViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		506801C01F1E850E00921167 /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		506AEF5A1F159E1C00693986 /* BucketList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BucketList.xcdatamodel; sourceTree = "<group>"; };
 		50EF13051F141E2700342822 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50EF13081F141E2700342822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,12 +88,13 @@
 				50EF13081F141E2700342822 /* AppDelegate.swift */,
 				506AEF591F159E1C00693986 /* BucketList.xcdatamodeld */,
 				50EF130A1F141E2700342822 /* BucketListViewController.swift */,
-				50EF132C1F14288500342822 /* AddItemTableViewControllerDelegate.swift */,
 				50EF130C1F141E2700342822 /* Main.storyboard */,
+				50EF132C1F14288500342822 /* AddItemTableViewControllerDelegate.swift */,
 				50EF13281F14234300342822 /* AddItemTableViewController.swift */,
 				50EF130F1F141E2700342822 /* Assets.xcassets */,
 				50EF13111F141E2700342822 /* LaunchScreen.storyboard */,
 				50EF13141F141E2700342822 /* Info.plist */,
+				506801C01F1E850E00921167 /* TaskModel.swift */,
 			);
 			path = BucketList;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				506801C11F1E850E00921167 /* TaskModel.swift in Sources */,
 				50EF130B1F141E2700342822 /* BucketListViewController.swift in Sources */,
 				50EF13091F141E2700342822 /* AppDelegate.swift in Sources */,
 				506AEF5B1F159E1C00693986 /* BucketList.xcdatamodeld in Sources */,

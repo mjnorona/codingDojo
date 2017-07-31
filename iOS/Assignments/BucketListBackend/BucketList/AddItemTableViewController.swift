@@ -10,7 +10,8 @@ import UIKit
 
 class AddItemTableViewController: UITableViewController {
     weak var delegate: AddItemTableViewControllerDelegate?
-    var item: String?
+    var item: NSDictionary?
+    var text: String?
     var indexPath: NSIndexPath?
     
     
@@ -22,14 +23,22 @@ class AddItemTableViewController: UITableViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-        let text = itemTextField.text!
-        delegate?.itemSaved(by: self, with: text, at: indexPath)
-        print(item)
+        
+        let id = item?["pk"] as! Int
+        self.text = itemTextField.text!
+        delegate?.itemSaved(by: self, with: self.text!, index: id, at: indexPath)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemTextField.text = item
+        if indexPath != nil {
+            let field = item?["fields"] as! NSDictionary
+            let objective = field["objective"] as! NSString
+            itemTextField.text = objective as! String
+        } else {
+            itemTextField.text = ""
+        }
+        
 
     }
 
