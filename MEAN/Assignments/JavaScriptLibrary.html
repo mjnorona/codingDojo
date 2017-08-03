@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        
+    </head>
+    <body>
+        <script>
+            var _ = {
+                map: function(arr, callback) {
+                    //code here;
+                    for (var i of arr) {
+                        callback(i)
+                    }
+
+                },
+                reduce: function(arr, callback) { 
+                    // code here;
+                    var total = 0;
+                    for (var i of arr) {
+                        total = callback(total,i)
+                    }
+                    return total
+
+                },
+                find: function(arr, callback) {   
+                    // code here;
+                    for (var i of arr) {
+                        if (callback(i)) {
+                            return i
+                        }
+                    }
+                },
+                filter: function(arr, callback) { 
+                    // code here;
+                    var newArray = []
+                    for (var i of arr) {
+                        if (callback(i)){
+                            newArray.push(i)
+                        }
+
+                    }
+                    return newArray
+
+                },
+                reject: function(arry, callback) { 
+                    // code here;
+                    var newArray = []
+                    for (var i of arr) {
+                        if (!callback(i)) {
+                            newArray.push(i)
+                        }
+                    }
+                    return newArray
+
+                }
+            }
+            // you just created a library with 5 methods!
+            var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+            console.log(evens); // if things are working right, this will return [2,4,6].
+
+        </script>
+    </body>
+</html>
