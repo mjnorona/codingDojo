@@ -37,6 +37,12 @@ var server = http.createServer(function (request, response){
             response.write(contents);  //  send response body
             response.end(); // finished!
         });
+    } else if(request.url === '/stylesheets/style.css'){
+        fs.readFile('./stylesheets/style.css', 'utf8', function(errors, contents){
+            response.writeHead(200, {'Content-type': 'text/css'});
+            response.write(contents);
+            response.end();
+        })
     }
     
     // request didn't match anything:
