@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <h1>Hello mongoose!</h1>
+        <button type=""><a href="/mongooses/new">Add New Mongoose</a></button>
+        <% for (mongoose of mongooses) { %>
+            <h4>Name: <%= mongoose.name %></h4>
+            <h5>Description: <%= mongoose.description %></h5>
+            <a href="/mongooses/<%= mongoose.id %>">Description</a>
+            <a href="/mongooses/edit/<%= mongoose.id %>">Edit</a>
+            <form action = '/mongooses/destroy/<%= mongoose.id %>'method = "post">
+                <button type="submit">Delete</button>
+            </form>
+            
+            <hr>
+
+        <% } %>
+    </body>
+</html>
