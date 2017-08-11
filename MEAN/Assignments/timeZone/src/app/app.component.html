@@ -1,0 +1,10 @@
+<h1>Us Time Zone Display</h1>
+
+<button type="" (click) = "changedZone('PST')" [ngClass] = "{'on': clicked === 'PST'}">PST</button>
+<button type="" (click) = "changedZone('MST')" [ngClass] = "{'on': clicked === 'MST'}">MST</button>
+<button type="" (click) = "changedZone('CST')" [ngClass] = "{'on': clicked === 'CST'}">CST</button>
+<button type="" (click) = "changedZone('EST')" [ngClass] = "{'on': clicked === 'EST'}">EST</button>
+<button type="" (click)= 'clicked = ""'>Clear</button>
+
+
+<h1 *ngIf = "!(clicked == '')">{{date | date: 'medium'}}</h1>

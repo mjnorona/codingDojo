@@ -21,7 +21,7 @@ export class AppComponent {
     content: 'nothing really special'
   }
   emails = [this.email1, this.email2]
-
+  
 }
 
 class Email {
