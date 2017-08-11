@@ -1,0 +1,4 @@
+<h1>Switchboard</h1>
+<button *ngFor = 'let switch of switches; let inx = index' (click) = 'pressed(inx)' [ngClass] = "{'on': switch == 'on','off': switch == 'off'}" >{{switch}}</button>
+
+
