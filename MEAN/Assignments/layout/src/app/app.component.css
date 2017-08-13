@@ -1,0 +1,24 @@
+app-header-component {
+    display: block;
+    background-color: #A0C6F6;
+    padding: 30px;
+    margin: 10px;
+}
+
+app-nav-component {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    background-color: #A0C6F6;
+    padding: 30px;
+    margin: 10px;
+}
+
+app-main-component {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    background-color: #A0C6F6;
+    padding: 30px;
+    margin: 10px;
+}
