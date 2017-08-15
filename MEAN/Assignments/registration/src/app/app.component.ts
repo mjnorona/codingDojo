@@ -1,0 +1,26 @@
+import { Component } from '@angular/core';
+import { NgModel } from '@angular/forms';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  user = {
+    first: '',
+    last: '',
+    email: '',
+    password: '',
+    confirm: '',
+    street: '',
+    unit: '',
+    city: '',
+    state: '',
+    lucky: ''
+  }
+  onSubmit() {
+    console.log("hello");
+    return false;
+  }
+}

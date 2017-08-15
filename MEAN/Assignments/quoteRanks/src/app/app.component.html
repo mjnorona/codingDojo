@@ -1,0 +1,8 @@
+{{quotes | json}}
+<app-quote-add (myEvent) = "invoke($event)"></app-quote-add>
+<app-quote-list 
+    [myQuotes] = 'quotes' 
+    (deleteEvent) = "delete($event)"
+    (upVoteEvent) = "upVote($event)"
+    (downVoteEvent) = "downVote($event)">
+</app-quote-list>

@@ -1,0 +1,31 @@
+<h1>Add a Quote</h1>
+<form (submit) = "callParent()" #formData = 'ngForm'>
+  <div>
+    <textarea 
+      name = 'submission'
+      rows="5"
+      cols="100" 
+      required
+      [(ngModel)] = 'quote.submission'
+      #submission = 'ngModel'>
+    </textarea>
+  </div>
+  
+  <div class = 'author'>
+    <h3>Author</h3>
+    <input 
+      name="author" 
+      required
+      [(ngModel)] = 'quote.author'
+      #author = 'ngModel'>
+  </div>
+  {{ quote | json}}
+  <button *ngIf = 'formData.valid' type="submit">Add Quote</button>
+</form>
+
+
+
+<div class = "error">
+  <p *ngIf = "!submission.valid">Quote is required</p>
+  <p *ngIf = "!author.valid">Author is required</p>
+</div>

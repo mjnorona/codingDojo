@@ -1,0 +1,141 @@
+<h1>Registration</h1>
+<form (submit) = "onSubmit()" #formData = 'ngForm' >
+  <h2>Account Information</h2>
+
+  <div class = "formField">
+    <h5>First Name: </h5>
+
+    <input 
+        name="first" 
+        [(ngModel)] = 'user.first' 
+        required 
+        #first='ngModel'>
+    <p *ngIf = "!first.valid">First name required</p>
+  </div>
+  
+  <div class = "formField">
+    <h5>Last Name:</h5>
+     
+    <input 
+      name="last" 
+      [(ngModel)] = 'user.last' 
+      required 
+      #last = 'ngModel'>
+    <p *ngIf = "!last.valid">Last name required</p>
+  </div>
+  
+  <div class = "formField">
+    <h5>Email: </h5>
+    
+    <input 
+      name="email" 
+      [(ngModel)] = 'user.email' 
+      required 
+      pattern = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
+      #email = 'ngModel'>
+    <p *ngIf = "!email.valid">Email required</p>
+  </div>
+  
+  <div class = "formField">
+    <h5>Password: </h5>
+    
+    <input 
+      name="password" 
+      [(ngModel)] = 'user.password' 
+      minlength="16" 
+      required 
+      #password = 'ngModel'>
+    <p *ngIf = "!password.valid">Password required</p>
+  </div>
+  
+  <div class = "formField">
+    <h5>Password Confirmation: </h5>
+    
+    <input 
+      type="confirm" 
+      name="confirm" 
+      [(ngModel)] = 'user.confirm' 
+      required 
+      #confirm = 'ngModel'>
+    <p *ngIf = "!confirm.valid">Confirmation required</p>
+  </div>
+  
+  <div class = "formField">
+    <h5>Street Address: </h5>
+    
+    <input 
+      name="street" 
+      [(ngModel)] = 'user.street' 
+      required 
+      #street = 'ngModel'>
+    <p *ngIf = "!street.valid">Street required</p>
+  </div>
+  
+  <div class = "formField"> 
+    <h5>Unit/Apt#: </h5>
+    
+    <input
+      name="unit" 
+      [(ngModel)] = 'user.unit' 
+      required 
+      #unit = 'ngModel'>
+  </div>
+  
+  <div class = "formField">
+    <h5>City: </h5>
+    
+    <input type="" 
+      name="city" 
+      [(ngModel)] = 'user.city' 
+      required 
+      #city = 'ngModel'>
+    <p *ngIf = "!city.valid">City required</p>
+  </div>
+
+  
+  <div class = "formField">
+    <h5>State: </h5>
+    
+    <select 
+      name = "state" 
+      [(ngModel)] = 'user.state' 
+      required 
+      #state = 'ngModel'>
+      <option value="Alaska">Alaska</option>
+      <option value="California">California</option>
+      <option value="Texas">Texas</option>
+      <option value="New York">New York</option>
+      <option value="Nevada">Nevada</option>
+    </select>
+    <p *ngIf = "!state.valid">State required</p>
+  </div>
+  
+  <div class = "formField">
+    <h5>I'm feeling lucky: </h5>
+    
+    <input 
+      class = "radio" 
+      type="radio" 
+      name="lucky" 
+      value="yes" 
+      [(ngModel)] = 'user.lucky' 
+      required 
+      #lucky = 'ngModel'> Yes
+    <input 
+      class = "radio" 
+      type="radio" 
+      name="lucky" 
+      value="no" 
+      [(ngModel)] = 'user.lucky' 
+      required 
+      #lucky = 'ngModel'>No
+    <p *ngIf = "!lucky.valid">Answer required</p>
+  </div>
+  
+
+
+  <button type="submit" *ngIf = "formData.valid == true">Register</button>
+  
+</form>
+
+{{user | json}}

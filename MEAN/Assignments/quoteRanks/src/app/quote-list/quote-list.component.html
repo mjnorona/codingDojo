@@ -1,0 +1,14 @@
+<h1>Quotes List</h1>
+{{ myQuotes | json}}
+
+<div *ngFor = "let quote of myQuotes; let idx = index" class = "quote">
+    <div>
+        <p>"{{quote.submission}}"</p>
+        <p>-{{quote.author}}</p>
+    </div>
+    
+    <h3>{{quote.votes}}</h3>
+    <button (click) = "upVote(idx)">Vote Up</button>
+    <button (click) = "downVote(idx)">Vote Down</button>
+    <button (click) = "delete(idx)">Delete</button>
+</div>

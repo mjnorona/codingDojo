@@ -21,8 +21,10 @@ export class AppComponent {
       this.date.setHours(this.date.getHours() + 2)
     } else if (this.clicked == "EST"){
       this.date.setHours(this.date.getHours() + 3)
+      console.log('hello')
     } else if (this.clicked == null) {
       this.date = null
+      console.log('null')
     }
     
   }
