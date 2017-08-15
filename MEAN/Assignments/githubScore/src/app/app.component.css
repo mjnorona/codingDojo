@@ -1,0 +1,25 @@
+
+
+.container {
+    border: 2px solid black;
+    margin: 30px;
+}
+
+form h3, input {
+    display: inline-block;
+}
+
+button {
+    display: block;
+}
+
+form {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.score {
+    margin-left: 30px;
+    display: inline-block;
+    vertical-align: top;
+}

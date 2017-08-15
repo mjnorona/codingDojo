@@ -1,0 +1,37 @@
+<div class = 'container'>
+  <h1>Github Score</h1>
+
+  
+  <form (submit) = 'getUser()'>
+    
+    <h3>Github Username: </h3>
+    <input name="username" [(ngModel)] = 'userInfo.username'>
+    <button type="submit">Calculate my Github Score</button>
+    {{userInfo | json}}
+  </form>
+  
+
+  <div class = 'score'>
+    <h1>Your Score: {{score}}</h1>
+    <h3 *ngIf = "score < 20" style = "color: red">Needs Work</h3>
+    <h3 *ngIf = "score >= 20 && score < 50" style = "color: orange">A decent start</h3>
+    <h3 *ngIf = "score >= 50 && score < 100" style = "color: black">Doing good!</h3>
+    <h3 *ngIf = "score >= 100 && score < 200" style = "color: green">Great job!</h3>
+    <h3 *ngIf = "score >= 200" style = "color: blue">Github elite!</h3>
+    
+  </div>
+</div>
+<h2>User Data</h2>
+{{user |json }}
+
+<hr>
+<h2>Repos</h2>
+{{repos}}
+
+<hr>
+<h2>Followers</h2>
+{{followers}}
+
+<hr>
+<h2>Score</h2>
+{{score}}
