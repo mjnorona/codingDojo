@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>Dojo Weather</h1>
+
+<a [routerLink]="['seattle']" (click) = 'getWeather("seattle")'>Seattle WA</a>|
+<a [routerLink]="['sanjose']" (click) = 'getWeather("sanjose")'>San Jose CA</a>|
+<a [routerLink]="['burbank']" (click) = 'getWeather("burbank")'>Burbank CA</a>|
+<a [routerLink]="['dallas']" (click) = 'getWeather("dallas")'>Dallas TX</a>|
+<a [routerLink]="['dc']" (click) = 'getWeather("washingtondc")'>Washington DC</a>|
+<a [routerLink]="['chicago']" (click) = 'getWeather("chicago")'>Chicago IL</a>
+{{ weather | json}}
+<router-outlet ></router-outlet>

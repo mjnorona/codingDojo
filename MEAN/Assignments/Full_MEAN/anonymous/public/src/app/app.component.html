@@ -1,0 +1,18 @@
+<h1>Anonymous Notes</h1>
+
+<form (submit) = "onSubmit()">
+  Note:
+  <textarea 
+    name = "content"
+    rows="1" 
+    cols="100"
+    required
+    minlength="3"
+    [(ngModel)] = "note.content"
+    #content = 'ngModel'>
+  </textarea>
+  <button *ngIf = 'content.valid' type="submit">Add Note</button>
+</form>
+
+{{ note | json}}
+<router-outlet></router-outlet>
